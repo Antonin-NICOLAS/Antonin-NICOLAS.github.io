@@ -1,0 +1,81 @@
+html{
+  --bg: #FCFCFC;
+  --color-text-navbar: #303030;
+  --color-text-body: #121111;
+  --title: rgb(220, 80, 80);
+  --1: #5770ff;
+  --2: #ff75b3;
+  --3: #ff7c6b;
+}
+html[data-theme='dark'] {
+  --bg: #030303;
+  --color-text-navbar: #cfcfcf;
+  --color-text-body: #edeeee;
+  --title: rgba(220,80,80,0.8);
+  --1: #313e88;
+  --2: #843d5d;
+  --3: #6d362f;
+}
+/*contenu a propos*/
+body{
+  overflow-x: hidden;
+}
+section{
+  width: 100%;
+}
+.topinner{
+  position: relative;
+  height: 12vh;
+  width: 100%;
+}
+.inner{
+  background-image: linear-gradient(135deg, var(--1) 0,var(--2) 60%, var(--3) 100%);
+  opacity: 0.6;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 6vh;
+  border-radius: 20px;
+  line-height: 2.3vw;
+}
+.a-propos{
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    color: var(--color-text-body);
+    font-size: 2vw;
+    font-weight: 500;
+    text-align: justify;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 15px;
+  }
+.a-propos-bold{
+  width: 40%;
+  margin-left: 30%;
+  text-align: center;
+  padding: 5px;
+  border: 3px solid darkcyan;
+  background-color: aqua;
+  border-radius: 20px;
+  font-family: 'Game of Squids', 'Times New Roman', Times, serif;
+  color: #000000;
+  font-size: 2vw;
+  font-weight: 1000;
+  margin-top: 10px;
+  }
+
+.a-canvas{
+  text-decoration: none;
+  color: var(--bg);
+  background-color: darkcyan;
+  }
+.au-revoir{
+  text-align: right;
+  }
+.a-canvas:hover{
+  background-color: tomato;
+  transition: 0.4s ease-in-out;
+}

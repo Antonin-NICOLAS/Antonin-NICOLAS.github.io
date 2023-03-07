@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+@import url('https://fonts.cdnfonts.com/css/game-of-squids');
+html{
+    --bg: #FCFCFC;
+    --color-text-navbar: #303030;
+    --color-text-body: #121111;
+    --title: rgb(220, 80, 80);
+    --1: #5770ff;
+    --2: #ff75b3;
+    --3: #ff7c6b;
+  }
+html[data-theme='dark'] {
+  --bg: #030303;
+  --color-text-navbar: #cfcfcf;
+  --color-text-body: #edeeee;
+  --title: rgba(220,80,80,0.8);
+  --1: #313e88;
+  --2: #843d5d;
+  --3: #6d362f;
+}
+
+body{
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+.topinner{
+  height: 8vh;
+  width: 100%;
+}
+
+section{
+  width: 100%;
+  display: inline-block;
+}
+
+/*PART1*/
+
+.PART1{
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+#myroom{
+    top: 0;
+    margin-right: 10%;
+    margin-left: 10%;
+    display: flex;
+    background-color: transparent;
+    z-index: 1;
+    width: 80%;
+    height: 108vh;
+    align-items: center;
+    justify-content: center;
+    }
+.titre{
+    color: rgb(7, 98, 116);
+    font-size: 60px;
+    display: inline;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    right: 27.5%;
+    width: 45%;
+    height: 40vh;
+    margin-top: 10vh;
+    font-family: 'Sigmar One', sans-serif;
+    z-index: 2;
+    transform: 2s;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    line-height: 5.9rem;
+}
+.important{
+  font-family: 'game of squids', sans-serif;
+  letter-spacing: 30px;
+  font-weight: 900;
+  font-size: 80px;
+}
+.char{
+  transform: translateY(200px);
+  transition: transform 1s;
+}
+
+
+/*PART2*/
+.EARTH3D{
+  position: absolute;
+}
+.texte1{
+  font-family: 'Georgia', sans-serif;
+  font-size: 30px;
+  float: right;
+  width: 30%;
+  margin-right: 5%;
+  margin-left: 65%;
+  margin-top: 50vh;
+  background-color: var(--color-text-body);
+  opacity: 0.6;
+  border-radius: 30px;
+  padding: 10px;
+}
+.texte2{
+  font-family: 'Georgia', sans-serif;
+  font-size: 30px;
+  float: left;
+  width: 30%;
+  margin-left: 5%;
+  background-color: var(--color-text-body);
+  opacity: 0.6;
+  border-radius: 30px;
+  padding: 20px;
+  z-index: 1;
+}
+.texte2.premier{
+  margin-top: 3%;
+}
+.texte1.second{
+  margin-bottom: 5%;
+}
+.premier{
+  margin-bottom: 50vh;
+}
+p{
+  color: var(--bg);
+  opacity: 1;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+/*animation*/
+.background-PART2{
+  position: absolute ;
+  z-index: 0;
+  margin: 0;
+  min-height: 92%;
+  min-width: 100%;
+}
+.background-PART1{
+  position: absolute ;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
