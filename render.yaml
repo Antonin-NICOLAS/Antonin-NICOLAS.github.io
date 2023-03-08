@@ -10,8 +10,3 @@ node_version: 18
 # La commande de démarrage de l'application
 build_command: npm run start
 start_command: npm run build
-
-# Les ports utilisés par l'application
-env:
-  - key: PORT
-    value: 8080
