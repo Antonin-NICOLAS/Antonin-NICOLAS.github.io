@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node copy-glb.cjs",
+    "build": "vite build && node copy-glb.cjs  && node server.cjs",
     "serve": "node server.cjs",
-    "start": "vite build && node copy-glb.cjs && node server.cjs"
+    "start": "vite build && node copy-glb.cjs"
   },
   "author": "Antonin",
   "dependencies": {
