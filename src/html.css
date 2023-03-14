@@ -12,6 +12,7 @@
     outline: none;
     margin: 0;
     padding: 0;
+    text-decoration: none
 }
 html{
   --bg: #FCFCFC;
@@ -632,4 +633,8 @@ body::-webkit-scrollbar-thumb{
 .imgfooterD{
   float: right;
   rotate: -90deg;
+}
+.topinner{
+  height: 8vh;
+  width: 100%;
 }

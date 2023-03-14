@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
 @import url('https://fonts.cdnfonts.com/css/game-of-squids');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plaster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+@import url('https://fonts.cdnfonts.com/css/conthrax');
 html{
     --bg: #FCFCFC;
     --color-text-navbar: #303030;
@@ -72,8 +76,10 @@ section{
     text-align: center;
     top: 0;
     right: 27.5%;
-    width: 45%;
+    width: 70%;
     height: 40vh;
+    left: 15%;
+    right: 15%;
     margin-top: 10vh;
     font-family: 'Sigmar One', sans-serif;
     z-index: 2;

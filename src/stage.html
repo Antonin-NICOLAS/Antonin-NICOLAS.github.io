@@ -5,19 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Passion-Stage</title>
-    <link rel="icon" href="./favicon.PNG" type="image/PNG">
-    <link rel="stylesheet" href="html.css">
-
+    <link rel="icon" href="./medias/favicon.PNG" type="image/PNG">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./html.css">
+    <link rel="stylesheet" href="./stage.css">
     <script src="https://kit.fontawesome.com/243189600f.js" crossorigin="anonymous"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@100&display=swap');
-    </style>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plaster&display=swap');
-    </style>
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
-    </style>
+    <script src="https://kit.fontawesome.com/dd1613c842.js" crossorigin="anonymous"></script>
 </head>
 <body class="light"  id="unselectable">
     <div class="loaderspace">
@@ -39,31 +33,59 @@
             <span></span>
         </div>
     </div>
-    <div id="progressBar"></div>
-    <div id="scrollPath"></div>
     <header role="header">
         <nav class="navbar dark-mode">
-            <div class="navbar__logo">PASSION</div>
+            <a href="index.html">
+                <div class="navbar__logo">PASSION</div>
+            </a>
             <div class="navbar__buttons">
                 <ul class="navbar__links">
-                    <li class="navbar__link first"> <a href="index.html"><i class="fa-solid fa-microchip"></i> Ma passion</a> </li>
-                    <li class="navbar__link second"> <a href="evolution.html"><i class="fa-solid fa-hourglass-start"></i> Orientation</a> </li>
-                    <li class="navbar__link third"> <a href="stage.html"><i class="fa-solid fa-unlock"></i> Stage</a> </li>
-                    <li class="navbar__link four"> <a href="a-propos.html"><i class="fa-solid fa-question"></i> À propos</a> </li>
-                    <li class="navbar__link fifth"> <a href="#"><i class="fa-solid fa-address-book"></i> Contact</a> </li>
+                    <li class="navbar__link first"
+                        style="translate: true; rotate: true; scale: true; transform: translateX(0%); opacity: 1;"> <a
+                            href="index.html"><i class="fa-solid fa-microchip"></i> Ma passion</a> </li>
+                    <li class="navbar__link second"
+                        style="translate: true; rotate: true; scale: true; transform: translateX(0%); opacity: 1;"> <a
+                            href="evolution.html"><i class="fa-solid fa-hourglass-start"></i> Évolution</a> </li>
+                    <li class="navbar__link third"
+                        style="translate: true; rotate: true; scale: true; transform: translateX(0%); opacity: 1;"> <a
+                            href="motivation.html"><i class="fa-solid fa-address-book"></i> Motivation</a> </li>
+                    <li class="navbar__link fourth"
+                        style="translate: true; rotate: true; scale: true; transform: translateX(0%); opacity: 1;"> <a
+                            href="stage.html"><i class="fa-solid fa-unlock"></i> Stage</a> </li>
+                    <li class="navbar__link fifth"
+                        style="translate: true; rotate: true; scale: true; transform: translateX(0%); opacity: 1;"> <a
+                            href="a-propos.html"><i class="fa-solid fa-question"></i> À propos</a> </li>
                 </ul>
                 <input type="checkbox" id="switch" name="theme"><label for="switch">Toogle</label>
             </div>
             <button class="burger">
-                <span class="bar"></span>  
-            </button>   
+                <span class="bar"></span>
+            </button>
         </nav>
     </header>
-    <div class="inner">
-        <main class="main-content" role="main">
-            <h1></h1>
-        </main>
-    </div>
+    <div class="topinner"></div>
+    <section>
+        <img class="imgfooterG" src="./medias/circuits.png" alt="img gauche footer">
+        <img class="imgfooterD" src="./medias/circuits.png" alt="img droite footer">
+        <div class="footer-basic">
+            <footer>
+                <div class="social">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-snapchat"></i></a>
+                </div>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="index.html">Ma passion</a></li>
+                    <li class="list-inline-item"><a href="evolution.html">Évolution</a></li>
+                    <li class="list-inline-item"><a href="#">Motivation</a></li>
+                    <li class="list-inline-item"><a href="stage.html">Stage</a></li>
+                    <li class="list-inline-item"><a href="a-propos.html">À propos</a></li>
+                </ul>
+                <p class="copyright">PASSION © 2023</p>
+            </footer>
+        </div>
+    </section>
     <script type="module" src="./general.js"></script>
 </body>
 </html>

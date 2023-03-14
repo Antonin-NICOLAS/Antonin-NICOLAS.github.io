@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+@import url('https://fonts.cdnfonts.com/css/game-of-squids');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plaster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+@import url('https://fonts.cdnfonts.com/css/conthrax');
+@import url("https://use.typekit.net/vbg7wpl.css");
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+section{
+    width: 100%;
+    display: inline-block;
+  }
+
+.row-wrapper {
+    padding: 35px 0;
+    font-family: 'muli', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: calc(100% - (15px * 2 + 30px * 2));
+    padding: 0 15px;
+    margin: 0 30px;
+    overflow: hidden;
+}
+
+.info-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.info-number {
+    margin-bottom: 15px;
+    font-family: 'muli', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: #FD0A87;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 3px;
+}
+
+.title, .title1, .title2, .title3 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 28px;
+    line-height: 1.2;
+    color: rgb(7, 98, 116);
+    font-family: 'Sigmar One', sans-serif;
+}
+
+.subheading {
+    font-size: 20px;
+    text-align: center;
+    color: var(--color-text-body);
+    font-family: 'Goldman';
+    margin: 3px 0;
+}
+
+.image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 0 15px;
+}
+
+.product-image {
+    width: 400px;
+    animation: floating 3s ease-in-out infinite;
+}
+.reverse .product-image {
+    width: 400px;
+    animation: floating 4.2s ease-in-out infinite;
+}
+@keyframes floating {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(20px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+.reverse{
+    background-color: rgba(var(--bg), 0.6);
+}
+
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+
+    .title, .title1, .title2, .title3 {
+        font-size: 34px;
+    }
+
+    .subheading {
+        font-size: 17px;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .row-wrapper {
+        padding: 40px 0;
+    }
+
+    .container {
+        flex-direction: row;
+        justify-content: center;
+        max-width: 720px;
+        margin: 0 auto;
+    }
+
+    .content-wrapper {
+        display: flex;
+        margin: 0 -15px;
+        justify-content: space-between;
+    }
+
+    .info-wrapper {
+        padding: 0 15px;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .title, .title1, .title2, .title3 {
+        font-size: 34px;
+        text-align: left;
+    }
+
+    .subheading {
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .image-wrapper {
+        padding: 0 15px;
+        margin: 0;
+    }
+
+    .reverse {
+        direction: row-reverse;
+        flex-direction: row-reverse;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .product-image {
+        width: 500px !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .row-wrapper {
+        padding: 50px 0;
+    }
+
+    .container {
+        max-width: 1200px;
+    }
+
+    .title, .title1, .title2, .title3 {
+        font-size: 44px !important;
+    }
+
+    .subheading {
+        font-size: 22px !important;
+    }
+}

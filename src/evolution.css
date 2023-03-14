@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+@import url('https://fonts.cdnfonts.com/css/game-of-squids');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plaster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+@import url('https://fonts.cdnfonts.com/css/conthrax');
+@import url("https://use.typekit.net/vbg7wpl.css");
+
 body{
     overflow-x: hidden;
     background-image: linear-gradient(135deg, var(--1) 0,var(--2) 60%, var(--3) 100%)
@@ -11,11 +19,6 @@ section{
     width: 100%;
     height: 90vh;
 }
-.topinner{
-    position: relative;
-    height: 8vh;
-    width: 100%;
-  }
   
   article,
   aside,
@@ -2489,7 +2492,7 @@ section{
     position: relative;
     z-index: -3;
   }
-  .section-timeline-cta{
+  .section-timeline-bottom{
     background-color: var(--bg);
   }
   
@@ -2972,7 +2975,7 @@ section{
       grid-row-start: 1;
     }
   
-    #w-node-ca21cc2f-00d7-84a3-f446-587e32a59c01-8b0ae424 {
+    #DATE5 {
       -ms-grid-column-span: 1;
       grid-column-end: 3;
       grid-column-start: 2;
@@ -2981,7 +2984,7 @@ section{
       grid-row-start: 1;
     }
   
-    #w-node-ca21cc2f-00d7-84a3-f446-587e32a59c04-8b0ae424 {
+    #CIRCLE5 {
       -ms-grid-column-span: 1;
       grid-column-end: 2;
       grid-column-start: 1;
@@ -2990,7 +2993,7 @@ section{
       grid-row-start: 1;
     }
   
-    #w-node-_37ab9472-ef92-a1c7-f6c5-ffbef2542159-8b0ae424 {
+    #DATE6 {
       -ms-grid-column-span: 1;
       grid-column-end: 3;
       grid-column-start: 2;
@@ -2999,7 +3002,7 @@ section{
       grid-row-start: 1;
     }
   
-    #w-node-_37ab9472-ef92-a1c7-f6c5-ffbef254215c-8b0ae424 {
+    #CIRCLE6 {
       -ms-grid-column-span: 1;
       grid-column-end: 2;
       grid-column-start: 1;
@@ -3008,7 +3011,7 @@ section{
       grid-row-start: 1;
     }
   
-    #w-node-_3f36ed1c-86ad-66f2-a7e0-a2e345d5b492-8b0ae424 {
+    #DATE7 {
       -ms-grid-column-span: 1;
       grid-column-end: 3;
       grid-column-start: 2;
@@ -3017,7 +3020,7 @@ section{
       grid-row-start: 1;
     }
   
-    #w-node-_3f36ed1c-86ad-66f2-a7e0-a2e345d5b495-8b0ae424 {
+    #CIRCLE7 {
       -ms-grid-column-span: 1;
       grid-column-end: 2;
       grid-column-start: 1;
