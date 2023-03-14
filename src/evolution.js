@@ -50,10 +50,6 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
         (gltf) => {
             scene.add(gltf.scene);
         },
-        undefined,
-        (error) => {
-            console.error(error);
-        }
     );
 
     // Fonction d'animation
