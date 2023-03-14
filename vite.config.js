@@ -22,7 +22,8 @@ export default {
             main: resolve(__dirname, 'src/index.html'),
             evolution: resolve(__dirname, 'src/evolution.html'),
             stage: resolve(__dirname, 'src/stage.html'),
-            apropos: resolve(__dirname, 'src/a-propos.html')
+            apropos: resolve(__dirname, 'src/a-propos.html'),
+            motivation: resolve(__dirname, 'src/motivation.html')
           }
         }
       },
