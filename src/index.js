@@ -60,10 +60,6 @@ gsap.to('.char', {
         (gltf) => {
           scene.add(gltf.scene);
         },
-        undefined,
-        (error) => {
-          console.error(error);
-        }
       );
 
       // Fonction d'animation
