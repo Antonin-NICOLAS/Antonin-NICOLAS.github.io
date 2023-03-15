@@ -25,7 +25,7 @@ export default {
             apropos: resolve(__dirname, 'src/a-propos.html'),
             motivation: resolve(__dirname, 'src/motivation.html'),
           },
-          external: [resolve(__dirname, 'node_modules/three/examples/jsm/controls/OrbitControls.js')]
+          external: ['./node_modules/three/examples/jsm/controls/OrbitControls.js']
         },
     },
 }
