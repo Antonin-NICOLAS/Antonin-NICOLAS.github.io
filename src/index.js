@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 import * as THREE from 'three'
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js'
-import {OrbitControls} from '../node_modules/three/examples/jsm/controls/OrbitControls.js';
+import {OrbitControls} from './medias/glb/OrbitControls.js';
 import * as ScrollMagic from "scrollmagic";
 import { ScrollMagicPluginIndicator} from "scrollmagic-plugins";
  
