@@ -18,6 +18,7 @@ export default {
         emptyOutDir: true,
         chunkSizeWarningLimit: 2000,
         rollupOptions: {
+          external: ['./node_modules/three/examples/jsm/controls/OrbitControls.js'],
           input: {
             main: resolve(__dirname, 'src/index.html'),
             evolution: resolve(__dirname, 'src/evolution.html'),
@@ -25,7 +26,6 @@ export default {
             apropos: resolve(__dirname, 'src/a-propos.html'),
             motivation: resolve(__dirname, 'src/motivation.html'),
           },
-          external: ['./node_modules/three/examples/jsm/controls/OrbitControls.js']
         },
     },
 }
