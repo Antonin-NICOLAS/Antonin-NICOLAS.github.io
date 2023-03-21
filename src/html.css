@@ -1,10 +1,10 @@
 /*fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+@import url('https://fonts.cdnfonts.com/css/game-of-squids');
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Plaster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
-@import url('https://fonts.cdnfonts.com/css/game-of-squids');
 @import url('https://fonts.cdnfonts.com/css/conthrax');
-
 
 /*reset*/
 *{
@@ -32,7 +32,10 @@ html[data-theme='dark'] {
   --2: #843d5d;
   --3: #6d362f;
 }
-
+body{
+  height: 100%;
+  width: 100%;
+}
 /*loader*/
 .loaderspace{
   position: fixed;
@@ -637,4 +640,12 @@ body::-webkit-scrollbar-thumb{
 .topinner{
   height: 8vh;
   width: 100%;
+}
+@media screen and (max-width:930px) {
+  .imgfooterG{
+    display: none;
+  }
+  .imgfooterD{
+    display: none;
+  }
 }

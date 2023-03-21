@@ -27,6 +27,8 @@ body{
   overflow-x: hidden;
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 .topinner{
   height: 8vh;
@@ -34,7 +36,7 @@ body{
 }
 
 section{
-  width: 100%;
+  width: 100vw;
   display: inline-block;
 }
 
@@ -100,8 +102,13 @@ section{
 
 
 /*PART2*/
+.MODEL3D1{
+  align-items: center;
+}
+
 .EARTH3D{
   position: absolute;
+  width: 60%;
 }
 .texte1{
   font-family: 'Georgia', sans-serif;
@@ -157,4 +164,327 @@ p{
   z-index: 0;
   width: 100%;
   height: 100%;
+}
+
+/*responsive*/
+@media screen and (max-width:1600px) {
+  .texte1{
+    font-size: 29px;
+  }
+  .texte2{
+    font-size: 29px;
+  }
+}
+@media screen and (max-width:1500px) {
+  .texte1{
+    font-size: 28px;
+  }
+  .texte2{
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width:1400px) {
+  .texte1{
+    font-size: 27px;
+  }
+  .texte2{
+    font-size: 27px;
+  }
+}
+@media screen and (max-width:1300px) {
+  .texte1{
+    font-size: 26px;
+  }
+  .texte2{
+    font-size: 26px;
+  }
+}
+@media screen and (max-width:1200px) {
+  .texte1{
+    font-size: 25px;
+  }
+  .texte2{
+    font-size: 25px;
+  }
+}
+@media screen and (max-width:1100px) {
+  .texte1{
+    font-size: 24px;
+  }
+  .texte2{
+    font-size: 24px;
+  }
+}
+@media screen and (max-width:1000px) {
+  .texte1{
+    font-size: 23px;
+  }
+  .texte2{
+    font-size: 23px;
+  }
+}
+@media screen and (max-width:950px) {
+  .texte1{
+    font-size: 22px;
+  }
+  .texte2{
+    font-size: 22px;
+  }
+}
+@media screen and (max-width:900px) {
+  .texte1{
+    font-size: 21px;
+  }
+  .texte2{
+    font-size: 21px;
+  }
+}
+@media screen and (max-width:850px) {
+  .texte1{
+    width: 31%;
+    margin-right: 5%;
+    margin-left: 64%;
+  }
+  .texte2{
+    width: 31%;
+    margin-left: 5%;
+    margin-right: 64%;
+  }
+}
+@media screen and (max-width:825px) {
+  .texte1{
+    width: 32%;
+    margin-right: 5%;
+    margin-left: 63%;
+  }
+  .texte2{
+    width: 32%;
+    margin-left: 5%;
+    margin-right: 63%;
+  }
+}
+@media screen and (max-width:800px) {
+  .texte1{
+    width: 33%;
+    margin-right: 5%;
+    margin-left: 62%;
+  }
+  .texte2{
+    width: 33%;
+    margin-left: 5%;
+    margin-right: 62%;
+  }
+}
+@media screen and (max-width:775px) {
+  .texte1{
+    width: 34%;
+    margin-right: 5%;
+    margin-left: 61%;
+  }
+  .texte2{
+    width: 34%;
+    margin-left: 5%;
+    margin-right: 61%;
+  }
+}
+@media screen and (max-width:750px) {
+  .texte1{
+    width: 35%;
+    margin-right: 5%;
+    margin-left: 60%;
+  }
+  .texte2{
+    width: 35%;
+    margin-left: 5%;
+    margin-right: 60%;
+  }
+}
+@media screen and (max-width:725px) {
+  .texte1{
+    width: 36%;
+    margin-right: 5%;
+    margin-left: 59%;
+  }
+  .texte2{
+    width: 36%;
+    margin-left: 5%;
+    margin-right: 59%;
+  }
+}
+@media screen and (max-width:700px) {
+  .texte1{
+    width: 37%;
+    margin-right: 5%;
+    margin-left: 58%;
+  }
+  .texte2{
+    width: 37%;
+    margin-left: 5%;
+    margin-right: 58%;
+  }
+}
+@media screen and (max-width:680px) {
+  .texte1{
+    font-size: 20.75px;
+  }
+  .texte2{
+    font-size: 20.75px;
+  }
+}
+@media screen and (max-width:670px) {
+  .texte1{
+    font-size: 20.5px;
+  }
+  .texte2{
+    font-size: 20.5px;
+  }
+}
+@media screen and (max-width:650px) {
+  .texte1{
+    font-size: 20.1px;
+  }
+  .texte2{
+    font-size: 20.1px;
+  }
+}
+@media screen and (max-width:637.5px) {
+  .texte1{
+    font-size: 19.8px;
+  }
+  .texte2{
+    font-size: 19.8px;
+  }
+}
+@media screen and (max-width:600px) {
+  .texte1{
+    font-size: 19.3px;
+  }
+  .texte2{
+    font-size: 19.3px;
+  }
+}
+@media screen and (max-width:585px) {
+  .texte1{
+    font-size: 18.9px;
+  }
+  .texte2{
+    font-size: 18.9px;
+  }
+}
+@media screen and (max-width:565px) {
+  .texte1{
+    width: 38%;
+    margin-right: 5%;
+    margin-left: 57%;
+  }
+  .texte2{
+    width: 38%;
+    margin-left: 5%;
+    margin-right: 57%;
+  }
+}
+@media screen and (max-width:548px) {
+  .texte1{
+    width: 39%;
+    margin-right: 5%;
+    margin-left: 56%;
+  }
+  .texte2{
+    width: 39%;
+    margin-left: 5%;
+    margin-right: 56%;
+  }
+}
+@media screen and (max-width:535px) {
+  .texte1{
+    width: 40%;
+    margin-right: 5%;
+    margin-left: 55%;
+  }
+  .texte2{
+    width: 40%;
+    margin-left: 5%;
+    margin-right: 55%;
+  }
+}
+@media screen and (max-width:521px) {
+  .texte1{
+    width: 41%;
+    margin-right: 5%;
+    margin-left: 54%;
+  }
+  .texte2{
+    width: 41%;
+    margin-left: 5%;
+    margin-right: 54%;
+  }
+}
+@media screen and (max-width:508px) {
+  .texte1{
+    width: 42%;
+    margin-right: 5%;
+    margin-left: 53%;
+  }
+  .texte2{
+    width: 42%;
+    margin-left: 5%;
+    margin-right: 53%;
+  }
+}
+@media screen and (max-width:496px) {
+  .texte1{
+    font-size: 18.5px;
+  }
+  .texte2{
+    font-size: 18.5px;
+  }
+}
+@media screen and (max-width:488px) {
+  .texte1{
+    font-size: 18.2px;
+  }
+  .texte2{
+    font-size: 18.2px;
+  }
+}
+@media screen and (max-width:466px) {
+  .texte1{
+    font-size: 17.9px;
+  }
+  .texte2{
+    font-size: 17.9px;
+  }
+}
+@media screen and (max-width:450px) {
+  .texte1{
+    font-size: 17.4px;
+  }
+  .texte2{
+    font-size: 17.4px;
+  }
+}
+@media screen and (max-width:438px) {
+  .texte1{
+    font-size: 17px;
+  }
+  .texte2{
+    font-size: 17px;
+  }
+}
+@media screen and (max-width:429px) {
+  .texte1{
+    font-size: 16.5px;
+  }
+  .texte2{
+    font-size: 16.5px;
+  }
+}
+@media screen and (max-width:413px) {
+  .texte1{
+    font-size: 4vw;
+  }
+  .texte2{
+    font-size: 4vw;
+  }
 }
