@@ -31,7 +31,7 @@
     "scrollmagic": "^2.0.8",
     "scrollmagic-plugins": "^1.0.8",
     "split-type": "^0.3.3",
-    "three": "^0.148.0",
+    "three": "^0.150.1",
     "vite": "^4.1.4"
   },
   "devDependencies": {
