@@ -26,6 +26,33 @@
     <link rel="stylesheet" href="a-propos.css">
     <script src="https://kit.fontawesome.com/243189600f.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/dd1613c842.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendmail() {
+            let name = document.getElementById("prenom").value;
+            let email = document.getElementById("email").value;
+            let objet = document.getElementById("objet").value;
+            let message = document.getElementById("message").value;
+
+            let body = "Name: " + name + "<br>" +
+                "Email: " + email + "<br>" +
+                "objet: " + objet + "<br>" +
+                "message: " + message + "<br>";
+            Email.send({
+                SecureToken: '0754576f-d12c-4dee-a667-ef79c3e9df66',
+                To: 'ant.nicolas@stanislas-cannes.com',
+                From: 'antoninnicolas547@gmail.com',
+                Subject: objet,
+                Body: body
+            }).then(
+                message => {
+                    let successMessage = document.getElementById("success-message");
+                    successMessage.innerHTML = "Merci pour votre commentaire envoyé avec succès !";
+                }
+            );
+            document.getElementById("formulaire").reset();
+        }
+    </script>
 </head>
 <body class="light"  id="unselectable">
     <div class="loaderspace">
@@ -157,6 +184,43 @@
                  <p class="a-propos au-revoir">Antonin NICOLAS 2nde 1</p>
             </main>
         </div>
+    </section>
+    <section>
+        <form method="post" id="formulaire">
+            <h1>Contactez-moi</h1>
+            <div class="separation"></div>
+            <div class="corps-formulaire">
+                <div class="gauche">
+                    <div class="groupe">
+                        <label for="prenom">Votre Prénom</label>
+                        <input type="text" name="prenom" id="prenom" autocomplete="on" />
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="groupe">
+                        <label for="email">Votre adresse e-mail <span class="obligatoire">*</span></label>
+                        <input type="email" name="email" id="email" autocomplete="on" required />
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="groupe">
+                        <label for="objet">Objet-Sujet</label>
+                        <input type="text" name="objet" id="objet" autocomplete="off" />
+                        <i class="fas fa-mobile"></i>
+                    </div>
+                </div>
+                <div class="droite">
+                    <div class="groupe">
+                        <label for="message">Message <span class="obligatoire">*</span></label>
+                        <textarea name="message" id="message"
+                            placeholder="Saisissez ici... Je serai heureux de recevoir vos commentaires ou vos conseils"
+                            required></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="pied-formulaire">
+                <button type="button" onclick="sendmail()">Envoyer le message</button>
+            </div>
+            <div id="success-message"></div>
+        </form>
     </section>
     <section>
         <div class="footer-basic">

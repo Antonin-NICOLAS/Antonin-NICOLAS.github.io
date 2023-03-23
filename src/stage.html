@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="google-site-verification" content="pyJKlZlhpX82d5PiH5DlPS8SEpet6YMTMlpTsu_oxbI" />
     <title>Passion-Stage</title>
-    <meta property="og:description" content="Bien plus qu'une simple présentation de ma passion pour le numérique et le codage, ce site est le reflet de ma détermination, de ma curiosité et de ma créativité. À travers chaque page, je partage mon parcours, mes premiers pas dans le monde du codage à mes réalisations les plus récentes. Mon site web est un témoignage inspirant de ce qu'il est possible de réaliser lorsqu'on suit sa passion et qu'on travaille dur pour atteindre ses objectifs." />
+    <meta property="og:description"
+        content="Bien plus qu'une simple présentation de ma passion pour le numérique et le codage, ce site est le reflet de ma détermination, de ma curiosité et de ma créativité. À travers chaque page, je partage mon parcours, mes premiers pas dans le monde du codage à mes réalisations les plus récentes. Mon site web est un témoignage inspirant de ce qu'il est possible de réaliser lorsqu'on suit sa passion et qu'on travaille dur pour atteindre ses objectifs." />
     <meta property="og:site_name" content="Ma Passion" />
     <meta property="og:type" content="personnal website" />
     <meta property="og:title" content="Passion-Stage">
-    <meta property="og:image" itemprop="image" content="https://antonin-nicolas-github-io.vercel.app/medias/glb/ogimage.png">
+    <meta property="og:image" itemprop="image"
+        content="https://antonin-nicolas-github-io.vercel.app/medias/glb/ogimage.png">
     <meta property="og:image:width" content="1770">
     <meta property="og:image:height" content="893">
     <meta property="og:updated_time" content="2023-03-15T18:36:33Z">
     <meta name="Author" content="Antonin NICOLAS">
     <meta name="Publisher" content="Antonin NICOLAS">
     <meta name="Identifier-Url" content="https://antonin-nicolas-github-io.vercel.app/motivation.html">
-    <meta name="Description" content="Bien plus qu'une simple présentation de ma passion pour le numérique et le codage, ce site est le reflet de ma détermination, de ma curiosité et de ma créativité. À travers chaque page, je partage mon parcours, mes premiers pas dans le monde du codage à mes réalisations les plus récentes. Mon site web est un témoignage inspirant de ce qu'il est possible de réaliser lorsqu'on suit sa passion et qu'on travaille dur pour atteindre ses objectifs.">
+    <meta name="Description"
+        content="Bien plus qu'une simple présentation de ma passion pour le numérique et le codage, ce site est le reflet de ma détermination, de ma curiosité et de ma créativité. À travers chaque page, je partage mon parcours, mes premiers pas dans le monde du codage à mes réalisations les plus récentes. Mon site web est un témoignage inspirant de ce qu'il est possible de réaliser lorsqu'on suit sa passion et qu'on travaille dur pour atteindre ses objectifs.">
     <meta name="Category" content="engineering">
     <meta name="theme-color" content="#1b1b1b" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#cfcfcf" media="(prefers-color-scheme: dark)">
@@ -28,8 +32,36 @@
     <link rel="stylesheet" href="./stage.css">
     <script src="https://kit.fontawesome.com/243189600f.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/dd1613c842.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendmail() {
+            let name = document.getElementById("prenom").value;
+            let email = document.getElementById("email").value;
+            let objet = document.getElementById("objet").value;
+            let message = document.getElementById("message").value;
+
+            let body = "Name: " + name + "<br>" +
+                "Email: " + email + "<br>" +
+                "objet: " + objet + "<br>" +
+                "message: " + message + "<br>";
+            Email.send({
+                SecureToken: '0754576f-d12c-4dee-a667-ef79c3e9df66',
+                To: 'ant.nicolas@stanislas-cannes.com',
+                From: 'antoninnicolas547@gmail.com',
+                Subject: objet,
+                Body: body
+            }).then(
+                message => {
+                    let successMessage = document.getElementById("success-message");
+                    successMessage.innerHTML = "Merci pour votre commentaire envoyé avec succès !";
+                }
+            );
+            document.getElementById("formulaire").reset();
+        }
+    </script>
 </head>
-<body class="light"  id="unselectable">
+
+<body class="light" id="unselectable">
     <div class="loaderspace">
         <div class="loader">
             <span></span>
@@ -81,6 +113,43 @@
     </header>
     <div class="topinner"></div>
     <section>
+        <form method="post" id="formulaire">
+            <h1>Contactez-moi</h1>
+            <div class="separation"></div>
+            <div class="corps-formulaire">
+                <div class="gauche">
+                    <div class="groupe">
+                        <label for="prenom">Votre Prénom</label>
+                        <input type="text" name="prenom" id="prenom" autocomplete="on" />
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="groupe">
+                        <label for="email">Votre adresse e-mail <span class="obligatoire">*</span></label>
+                        <input type="email" name="email" id="email" autocomplete="on" required />
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="groupe">
+                        <label for="objet">Objet-Sujet</label>
+                        <input type="text" name="objet" id="objet" autocomplete="off" />
+                        <i class="fas fa-mobile"></i>
+                    </div>
+                </div>
+                <div class="droite">
+                    <div class="groupe">
+                        <label for="message">Message <span class="obligatoire">*</span></label>
+                        <textarea name="message" id="message"
+                            placeholder="Saisissez ici... Je serai heureux de recevoir vos commentaires ou vos conseils"
+                            required></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="pied-formulaire">
+                <button type="button" onclick="sendmail()">Envoyer le message</button>
+            </div>
+            <div id="success-message"></div>
+        </form>
+    </section>
+    <section>
         <img class="imgfooterG" src="./medias/circuits.png" alt="img gauche footer">
         <img class="imgfooterD" src="./medias/circuits.png" alt="img droite footer">
         <div class="footer-basic">
@@ -104,4 +173,5 @@
     </section>
     <script type="module" src="./general.js"></script>
 </body>
+
 </html>

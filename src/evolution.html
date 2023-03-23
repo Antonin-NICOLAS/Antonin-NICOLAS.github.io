@@ -7,18 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="google-site-verification" content="pyJKlZlhpX82d5PiH5DlPS8SEpet6YMTMlpTsu_oxbI" />
     <title>Passion-Evolution</title>
-    <meta property="og:description" content="Bien plus qu'une simple présentation de ma passion pour le numérique et le codage, ce site est le reflet de ma détermination, de ma curiosité et de ma créativité. À travers chaque page, je partage mon parcours, mes premiers pas dans le monde du codage à mes réalisations les plus récentes. Mon site web est un témoignage inspirant de ce qu'il est possible de réaliser lorsqu'on suit sa passion et qu'on travaille dur pour atteindre ses objectifs." />
+    <meta property="og:description"
+        content="Bien plus qu'une simple présentation de ma passion pour le numérique et le codage, ce site est le reflet de ma détermination, de ma curiosité et de ma créativité. À travers chaque page, je partage mon parcours, mes premiers pas dans le monde du codage à mes réalisations les plus récentes. Mon site web est un témoignage inspirant de ce qu'il est possible de réaliser lorsqu'on suit sa passion et qu'on travaille dur pour atteindre ses objectifs." />
     <meta property="og:site_name" content="Ma Passion" />
     <meta property="og:type" content="personnal website" />
     <meta property="og:title" content="Passion-Evolution">
-    <meta property="og:image" itemprop="image" content="https://antonin-nicolas-github-io.vercel.app/medias/glb/ogimage.png">
+    <meta property="og:image" itemprop="image"
+        content="https://antonin-nicolas-github-io.vercel.app/medias/glb/ogimage.png">
     <meta property="og:image:width" content="1770">
     <meta property="og:image:height" content="893">
     <meta property="og:updated_time" content="2023-03-15T18:36:33Z">
     <meta name="Author" content="Antonin NICOLAS">
     <meta name="Publisher" content="Antonin NICOLAS">
     <meta name="Identifier-Url" content="https://antonin-nicolas-github-io.vercel.app/motivation.html">
-    <meta name="Description" content="Bien plus qu'une simple présentation de ma passion pour le numérique et le codage, ce site est le reflet de ma détermination, de ma curiosité et de ma créativité. À travers chaque page, je partage mon parcours, mes premiers pas dans le monde du codage à mes réalisations les plus récentes. Mon site web est un témoignage inspirant de ce qu'il est possible de réaliser lorsqu'on suit sa passion et qu'on travaille dur pour atteindre ses objectifs.">
+    <meta name="Description"
+        content="Bien plus qu'une simple présentation de ma passion pour le numérique et le codage, ce site est le reflet de ma détermination, de ma curiosité et de ma créativité. À travers chaque page, je partage mon parcours, mes premiers pas dans le monde du codage à mes réalisations les plus récentes. Mon site web est un témoignage inspirant de ce qu'il est possible de réaliser lorsqu'on suit sa passion et qu'on travaille dur pour atteindre ses objectifs.">
     <meta name="Category" content="engineering">
     <meta name="theme-color" content="#1b1b1b" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#cfcfcf" media="(prefers-color-scheme: dark)">
@@ -33,8 +36,35 @@
                 ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
         }(window, document);
     </script>
-        <script src="https://kit.fontawesome.com/243189600f.js" crossorigin="anonymous"></script>
-        <script src="https://kit.fontawesome.com/dd1613c842.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/243189600f.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/dd1613c842.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendmail() {
+            let name = document.getElementById("prenom").value;
+            let email = document.getElementById("email").value;
+            let objet = document.getElementById("objet").value;
+            let message = document.getElementById("message").value;
+
+            let body = "Name: " + name + "<br>" +
+                "Email: " + email + "<br>" +
+                "objet: " + objet + "<br>" +
+                "message: " + message + "<br>";
+            Email.send({
+                SecureToken: '0754576f-d12c-4dee-a667-ef79c3e9df66',
+                To: 'ant.nicolas@stanislas-cannes.com',
+                From: 'antoninnicolas547@gmail.com',
+                Subject: objet,
+                Body: body
+            }).then(
+                message => {
+                    let successMessage = document.getElementById("success-message");
+                    successMessage.innerHTML = "Merci pour votre commentaire envoyé avec succès !";
+                }
+            );
+            document.getElementById("formulaire").reset();
+        }
+    </script>
 </head>
 
 <body class="light" id="unselectable">
@@ -59,7 +89,9 @@
     </div>
     <header role="header">
         <nav class="navbar dark-mode">
-            <a href="index.html"><div class="navbar__logo">PASSION</div></a>
+            <a href="index.html">
+                <div class="navbar__logo">PASSION</div>
+            </a>
             <div class="navbar__buttons">
                 <ul class="navbar__links">
                     <li class="navbar__link first"
@@ -69,8 +101,8 @@
                         style="translate: true; rotate: true; scale: true; transform: translateX(0%); opacity: 1;"> <a
                             href="evolution.html"><i class="fa-solid fa-hourglass-start"></i> Évolution</a> </li>
                     <li class="navbar__link third"
-                    style="translate: true; rotate: true; scale: true; transform: translateX(0%); opacity: 1;"> <a
-                        href="motivation.html"><i class="fa-solid fa-address-book"></i> Motivation</a> </li>
+                        style="translate: true; rotate: true; scale: true; transform: translateX(0%); opacity: 1;"> <a
+                            href="motivation.html"><i class="fa-solid fa-address-book"></i> Motivation</a> </li>
                     <li class="navbar__link fourth"
                         style="translate: true; rotate: true; scale: true; transform: translateX(0%); opacity: 1;"> <a
                             href="stage.html"><i class="fa-solid fa-unlock"></i> Stage</a> </li>
@@ -224,8 +256,8 @@
                             <div class="timeline_image-wrapper margin-bottom-medium"><img
                                     srcset="./medias/evolution/lego_mindstorms.png 800w, ./medias/evolution/lego_mindstorms500w.jpeg 506w"
                                     loading="eager" width="480" alt="" /></div>
-                            <div class="timeline_quote-wrapper"><img src="./medias/evolution/icon_quotation.png" loading="eager"
-                                    alt="" class="timeline_quote-image" />
+                            <div class="timeline_quote-wrapper"><img src="./medias/evolution/icon_quotation.png"
+                                    loading="eager" alt="" class="timeline_quote-image" />
                                 <div class="timeline_quote-text-wrapper">
                                     <p class="timeline_quote">“La robotique est le reflet de notre désir d'aller
                                         toujours plus loin,
@@ -347,44 +379,49 @@
                                     <p class="text-colour-white">Damien RAYNAL<br /></p>
                                 </div>
                             </div>
-                            <div class="margin-bottom-xlarge timeline_image-wrapper"><img
-                                    loading="eager" width="480"
+                            <div class="margin-bottom-xlarge timeline_image-wrapper"><img loading="eager" width="480"
                                     sizes="(max-width: 479px) 48px, (max-width: 767px) 64px, 36vw"
                                     srcset="./medias/evolution/paloalto_building.png"
                                     alt="batiment Palo Alto Networks" /></div>
-                                    <div class="margin-bottom-medium">
-                                        <p class="text-colour-lightgrey">La sécurité des systèmes d’information est captivante, d’une
-                                            large richesse scientifique, unissant de nombreuses disciplines, et au contact d’une grande 
-                                            variété d’organisations et d’acteurs, du secteur public comme du monde de l’entreprise, en 
-                                            France comme à l’international. <br> <br>
-                                            Elle est aussi un sujet qui bouscule des habitudes politiques, diplomatiques, 
-                                            économiques ou militaires. Considérée par la France comme priorité nationale, 
-                                            la sécurité des systèmes 
-                                            d’information, ou cybersécurité, concerne désormais aussi chacun d’entre nous.<br> <br>
-                                            Les formidables applications que permet le numérique ne seront durables que si elles 
-                                            recueillent la confiance de leurs utilisateurs. Pour construire une société capable 
-                                            de faire face à des risques croissants, à des acteurs agiles aux techniques d’attaques 
-                                            de plus en plus élaborées, il faut systématiquement intégrer les composantes de la 
-                                            sécurité numérique.<br>
-                                        </p>
-                                    </div>
-                                    <div class="margin-bottom-xlarge timeline_image-wrapper"><img
-                                        loading="eager" width="480"
-                                        sizes="(max-width: 479px) 48px, (max-width: 767px) 64px, 36vw"
-                                        srcset="./medias/evolution/mydatacenter.png"
-                                        alt="batiment Palo Alto Networks" /></div>
-                                        <div class="margin-bottom-medium">
-                                            <p class="text-colour-lightgrey">Ce stage fut tout à fait enrichissant pour moi car il 
-                                                m’a permis de découvrir le domaine de la cybersécurité, ses acteurs, ses contraintes, 
-                                                mais aussi de participer concrètement à ses enjeux au travers de mes missions. <br> <br>
-                                                Aujourd’hui, cette expérience vient confirmer le fait que j’ai fait le bon choix 
-                                                d’orientation et me permet d’affiner mon futur projet professionnel. En effet, 
-                                                je sais désormais que configurer un firewall, rechercher les virus - pour que 
-                                                chaque jour le monde soit un peu plus sécurisé que le précédent – sont des tâches 
-                                                qui me sont tout à fait adaptées, d’ailleurs ces missions pourraient constituer 
-                                                ma future spécialité.<br>
-                                            </p>
-                                        </div>
+                            <div class="margin-bottom-medium">
+                                <p class="text-colour-lightgrey">La sécurité des systèmes d’information est captivante,
+                                    d’une
+                                    large richesse scientifique, unissant de nombreuses disciplines, et au contact d’une
+                                    grande
+                                    variété d’organisations et d’acteurs, du secteur public comme du monde de
+                                    l’entreprise, en
+                                    France comme à l’international. <br> <br>
+                                    Elle est aussi un sujet qui bouscule des habitudes politiques, diplomatiques,
+                                    économiques ou militaires. Considérée par la France comme priorité nationale,
+                                    la sécurité des systèmes
+                                    d’information, ou cybersécurité, concerne désormais aussi chacun d’entre nous.<br>
+                                    <br>
+                                    Les formidables applications que permet le numérique ne seront durables que si elles
+                                    recueillent la confiance de leurs utilisateurs. Pour construire une société capable
+                                    de faire face à des risques croissants, à des acteurs agiles aux techniques
+                                    d’attaques
+                                    de plus en plus élaborées, il faut systématiquement intégrer les composantes de la
+                                    sécurité numérique.<br>
+                                </p>
+                            </div>
+                            <div class="margin-bottom-xlarge timeline_image-wrapper"><img loading="eager" width="480"
+                                    sizes="(max-width: 479px) 48px, (max-width: 767px) 64px, 36vw"
+                                    srcset="./medias/evolution/mydatacenter.png" alt="batiment Palo Alto Networks" />
+                            </div>
+                            <div class="margin-bottom-medium">
+                                <p class="text-colour-lightgrey">Ce stage fut tout à fait enrichissant pour moi car il
+                                    m’a permis de découvrir le domaine de la cybersécurité, ses acteurs, ses
+                                    contraintes,
+                                    mais aussi de participer concrètement à ses enjeux au travers de mes missions. <br>
+                                    <br>
+                                    Aujourd’hui, cette expérience vient confirmer le fait que j’ai fait le bon choix
+                                    d’orientation et me permet d’affiner mon futur projet professionnel. En effet,
+                                    je sais désormais que configurer un firewall, rechercher les virus - pour que
+                                    chaque jour le monde soit un peu plus sécurisé que le précédent – sont des tâches
+                                    qui me sont tout à fait adaptées, d’ailleurs ces missions pourraient constituer
+                                    ma future spécialité.<br>
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <div class="timeline_item">
@@ -396,24 +433,27 @@
                         </div>
                         <div class="timeline_right">
                             <div class="margin-bottom-medium">
-                                <div class="timeline_text">Aujourd'hui, à l'âge de 15 ans, je suis fier de mon parcours 
-                                    en codage et souhaite rendre hommage à mon oncle qui m'a donné l'envie de découvrir 
-                                    ce domaine fascinant. J'ai donc pris le soin de créer ce site en y mettant ma force, ma 
-                                    persévérence et ce que j'ai acquis après tant d'année d'apprentissage et dans lequel 
-                                    je partage mon expérience et mon parcours d'apprentissage du codage, en mettant en 
-                                    avant les moments clés qui ont marqué mon court parcours. Je veux inspirer les jeunes 
-                                    qui comme moi, sont passionnés par la technologie et l'informatique, et leur montrer 
-                                    que tout est possible avec de la passion, de la motivation et de la persévérance.<br /></div>
+                                <div class="timeline_text">Aujourd'hui, à l'âge de 15 ans, je suis fier de mon parcours
+                                    en codage et souhaite rendre hommage à mon oncle qui m'a donné l'envie de découvrir
+                                    ce domaine fascinant. J'ai donc pris le soin de créer ce site en y mettant ma force,
+                                    ma
+                                    persévérence et ce que j'ai acquis après tant d'année d'apprentissage et dans lequel
+                                    je partage mon expérience et mon parcours d'apprentissage du codage, en mettant en
+                                    avant les moments clés qui ont marqué mon court parcours. Je veux inspirer les
+                                    jeunes
+                                    qui comme moi, sont passionnés par la technologie et l'informatique, et leur montrer
+                                    que tout est possible avec de la passion, de la motivation et de la
+                                    persévérance.<br /></div>
                             </div>
                             <div class="margin-bottom-xlarge">
                                 <div class="inline-block"><a href="https://techcrunch.com/" target="_blank"
                                         class="timeline_link w-inline-block">
-                                        <div>consulter les dernières nouvelles technologiques&ensp;</div><i class="fa-solid fa-arrow-up-right-from-square"
+                                        <div>consulter les dernières nouvelles technologiques&ensp;</div><i
+                                            class="fa-solid fa-arrow-up-right-from-square"
                                             style="color:#fff; opacity: 0.6;"></i>
                                     </a></div>
                             </div>
-                            <div class="timeline_image-wrapper"><img
-                                    src="./medias/evolution/timeline_end.png"
+                            <div class="timeline_image-wrapper"><img src="./medias/evolution/timeline_end.png"
                                     loading="eager" width="480" alt="" /></div>
                         </div>
                     </div>
@@ -440,6 +480,43 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div>
+                <form method="post" id="formulaire">
+                    <h1>Contactez-moi</h1>
+                    <div class="separation"></div>
+                    <div class="corps-formulaire">
+                        <div class="gauche">
+                            <div class="groupe">
+                                <label for="prenom">Votre Prénom</label>
+                                <input type="text" name="prenom" id="prenom" autocomplete="on" />
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="groupe">
+                                <label for="email">Votre adresse e-mail <span class="obligatoire">*</span></label>
+                                <input type="email" name="email" id="email" autocomplete="on" required />
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="groupe">
+                                <label for="objet">Objet-Sujet</label>
+                                <input type="text" name="objet" id="objet" autocomplete="off" />
+                                <i class="fas fa-mobile"></i>
+                            </div>
+                        </div>
+                        <div class="droite">
+                            <div class="groupe">
+                                <label for="message">Message <span class="obligatoire">*</span></label>
+                                <textarea name="message" id="message"
+                                    placeholder="Saisissez ici... Je serai heureux de recevoir vos commentaires ou vos conseils"
+                                    required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pied-formulaire">
+                        <button type="button" onclick="sendmail()">Envoyer le message</button>
+                    </div>
+                    <div id="success-message"></div>
+                </form>
             </div>
         </div>
     </div>

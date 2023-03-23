@@ -257,7 +257,7 @@ input[type=checkbox]{
 	visibility: hidden;
 }
 
-label {
+.navbar__buttons label {
 	cursor: pointer;
 	text-indent: -9999px;
 	width: 52px;
@@ -268,7 +268,7 @@ label {
 	position: relative;
 }
 
-label:after {
+.navbar__buttons label:after {
 	content: '';
 	position: absolute;
 	top: 3px;
@@ -280,16 +280,16 @@ label:after {
 	transition: 0.3s;
 }
 
-input:checked + label {
+.navbar__buttons input:checked + .navbar__buttons label {
 	background: var(--bg);
 }
 
-input:checked + label:after {
+.navbar__buttons input:checked + label:after {
 	left: calc(100% - 5px);
 	transform: translateX(-100%);
 }
 
-label:active:after {
+.navbar__buttons label:active:after {
 	width: 45px;
 }
 
@@ -560,6 +560,100 @@ body::-webkit-scrollbar-thumb{
   background-color: #03258b;
   border-radius: 15px;
   opacity: 1;
+}
+/*contact*/
+form {
+  padding: 30px;
+  background-color: var(--bg);
+  z-index: 20;
+}
+form h1 {
+  font-size: 20px;
+  color: var(--color-text-body);
+}
+form .separation {
+  width: 100%;
+  height: 1px;
+  background-color: #747cdf;
+}
+form .corps-formulaire {
+  display: flex;
+  flex-wrap: wrap;
+}
+form .corps-formulaire .groupe {
+  position: relative; /* Pour mettre positionner l’élément dans le flux normal de la page */
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+form .corps-formulaire .groupe label {
+    color: var(--color-text-body);
+}
+form .corps-formulaire .gauche .groupe input {
+  margin-top: 5px;
+  padding: 10px 5px 10px 30px;
+  border: 1px solid #c9c9c9;
+  outline-color: #747cdf;
+  border-radius: 5px;
+}
+form .corps-formulaire .gauche .groupe i {
+  position: absolute; /* positionné par rapport à son parent le plus proche positionné */
+  left: 0;
+  top: 25px;
+  padding: 9px 8px;
+  color: #747cdf;
+}
+form .corps-formulaire .droite {
+  margin-left: 40px;
+  width: 50%;
+}
+form .corps-formulaire .droite .groupe {
+  height: 100%;
+}
+form .corps-formulaire .droite .groupe textarea {
+  margin-top: 5px;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 2px solid #747cdf;
+  outline: none;
+  border-radius: 5px;
+  resize: none;
+  height: 72%;
+}
+form .pied-formulaire button {
+  margin-top: 10px;
+  background-color: #747cdf;
+  color: white;
+  font-size: 15px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+form .pied-formulaire{
+    width: 100%;
+    text-align: center;
+}
+form .pied-formulaire button:hover {
+  transform: scale(1.05);
+}
+#success-message{
+  color: darkgreen;
+}
+@media screen and (max-width: 550px) {
+  form .corps-formulaire .droite {
+    margin-left: 0px;
+    width: 90%;
+    height: 40vh;
+
+  }
+}
+@media screen and (max-width: 550px) {
+  form .corps-formulaire {
+    justify-content: center;
+  }
 }
 
 /*footer*/
