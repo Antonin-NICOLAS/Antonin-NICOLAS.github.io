@@ -336,10 +336,26 @@ p {
 .margin-bottom-xlarge {
   margin-bottom: 56px;
 }
+img{
+  border-radius: 10px;
+}
 
 .timeline_image-wrapper {
   overflow: hidden;
   border-radius: 12px;
+  display: inline-block;
+}
+.geekschool_logo{
+  background-image: linear-gradient(138deg, #000, transparent 28%), url("./medias/Image_Background.png");
+  background-position: 0px 0px, 0px 0px;
+  background-size: auto, cover;
+}
+.lego_mindstorms{
+  background-image: linear-gradient(138deg, #000, transparent 28%), url("./medias/Image_Background.png");
+  background-position: 0px 0px, 0px 0px;
+  background-size: auto, cover;
+}
+.javascript_lines{
   background-image: linear-gradient(138deg, #000, transparent 28%), url("./medias/Image_Background.png");
   background-position: 0px 0px, 0px 0px;
   background-size: auto, cover;
