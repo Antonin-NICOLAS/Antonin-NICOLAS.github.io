@@ -2,7 +2,7 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
-const parcelPath = new URL('https://antonin-nicolas-github-io.vercel.app/medias/glb/Robot.glb', import.meta.url);
+const parcelPath = new URL('./medias/glb/Robot.glb', import.meta.url);
 //ROBOT3D//
 
     // Initialisation de la scène
