@@ -16,9 +16,8 @@ export default {
         outDir: resolve(__dirname, 'dist'),
         assetsDir: 'medias',
         emptyOutDir: true,
-        chunkSizeWarningLimit: 2000,
+        chunkSizeWarningLimit: 2500,
         rollupOptions: {
-          external: ['./node_modules/three/examples/jsm/controls/OrbitControls.js'],
           input: {
             main: resolve(__dirname, 'src/index.html'),
             evolution: resolve(__dirname, 'src/evolution.html'),
