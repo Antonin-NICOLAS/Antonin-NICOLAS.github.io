@@ -8,7 +8,7 @@ import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
 import * as ScrollMagic from "scrollmagic";
 import { ScrollMagicPluginIndicator} from "scrollmagic-plugins";
 
-const parcelPath = new URL('/medias/glb/EARTH3D.glb', import.meta.url);
+const parcelPath = new URL('/medias/EARTH3D.glb', import.meta.url);
  
 
 //title animation//
