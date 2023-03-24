@@ -7,7 +7,8 @@ import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader'
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
 import * as ScrollMagic from "scrollmagic";
 import { ScrollMagicPluginIndicator} from "scrollmagic-plugins";
- 
+
+const parcelPath = new URL('/medias/glb/EARTH3D.glb', import.meta.url);
 
 //title animation//
 const myText = new SplitType('.titre')
@@ -56,7 +57,7 @@ gsap.to('.char', {
       // Chargement du modèle 3D
       const loader = new GLTFLoader();
       loader.load(
-        new URL('/medias/glb/EARTH3D.glb', import.meta.url) , // chemin vers le modèle
+        parcelPath.href , // chemin vers le modèle
         (gltf) => {
           scene.add(gltf.scene);
         },
