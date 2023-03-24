@@ -2,7 +2,7 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
-const parcelPath = new URL('https://github.com/Antonin-NICOLAS/Antonin-NICOLAS.github.io/blob/main/src/medias/glb/Robot.glb?raw=true&token=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', import.meta.url);
+const parcelPath = new URL('/medias/glb/Robot.glb', import.meta.url);
 //ROBOT3D//
 
     // Initialisation de la scène
