@@ -10,11 +10,11 @@ export default {
     {
         host: true,
         open: !isCodeSandbox // Open if it's not a CodeSandbox,
-            fs: {
-                // Le chemin absolu vers votre dossier contenant les fichiers GLB
-                strict: true,
-                allow: ['/medias/glb/'],
-        },
+    },
+    fs: {
+        // Le chemin absolu vers votre dossier contenant les fichiers G
+        strict: true,
+        allow: ['/medias/glb/'],
     },
     plugins: [reactRefresh()],
     build: {
