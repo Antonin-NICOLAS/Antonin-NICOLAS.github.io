@@ -5,9 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "git lfs install && git lfs fetch origin main && vite build && node copy-glb.cjs",
+    "build": "vite build && node copy-glb.cjs",
     "start": "node server.cjs",
     "all": "vite build && node copy-glb.cjs && node server.cjs"
+  },
+  "prebuild": {
+    "install-lfs": "git lfs install",
+    "fetch-lfs": "git lfs fetch origin main"
   },
   "author": "Antonin",
   "dependencies": {
@@ -24,6 +28,7 @@
     "gsap": "^3.11.4",
     "jquery": "^3.6.3",
     "lil-gui": "^0.18.0",
+    "next": "^12.0.7"
     "nodemon": "^2.0.21",
     "parcel-bundler": "^1.3.1",
     "react": "^18.2.0",
