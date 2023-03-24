@@ -56,7 +56,7 @@ gsap.to('.char', {
       // Chargement du modèle 3D
       const loader = new GLTFLoader();
       loader.load(
-        '/medias/glb/EARTH3D.glb' , // chemin vers le modèle
+        new URL('/medias/glb/EARTH3D.glb', import.meta.url) , // chemin vers le modèle
         (gltf) => {
           scene.add(gltf.scene);
         },
