@@ -469,6 +469,34 @@ img{
 .margin-bottom-large {
   margin-bottom: 40px;
 }
+.ROBOT3D-loader {
+  position: absolute;
+  width: 300px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 999;
+}
+
+.modelloader {
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #3498db;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: modelloader 2s linear infinite;
+}
+@keyframes modelloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 @media screen and (max-width: 991px) {
   h1 {

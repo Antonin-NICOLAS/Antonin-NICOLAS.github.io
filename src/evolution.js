@@ -2,6 +2,10 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
+const container = document.querySelector('#robotcontainer');
+const loaderContainer = container.querySelector('.ROBOT3D-loader');
+const loaderrobot = loaderContainer.querySelector('.modelloader');
+
 //ROBOT3D//
 
 // Initialisation de la scène
@@ -49,6 +53,11 @@ loader.load(
     '/medias/glb/Robot.glb',
     (gltf) => {
         scene.add(gltf.scene);
+        loaderContainer.style.display = 'none';
+    },
+    (xhr) => {
+        const progress = xhr.loaded / xhr.total;
+        loaderrobot.style.transform = `scale(${progress})`;
     },
     undefined,
     (error) => {
