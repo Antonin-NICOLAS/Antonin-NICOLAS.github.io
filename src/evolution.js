@@ -45,7 +45,7 @@ controls.enableDamping = true;
 
 // Chargement du modèle 3D
 const loader = new GLTFLoader();
-fetch('https://storage.googleapis.com/robotglb/Robot.glb')
+fetch('https://storage.googleapis.com/robotglb/Robot.glb',{mode: 'no-cors',credentials: 'include'})
     .then(response => response.blob())
     .then(blob => {
         // Utilisez createObjectURL pour créer une URL blob à partir de la réponse HTTP
