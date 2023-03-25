@@ -44,6 +44,11 @@ const glbUrl = 'https://storage.googleapis.com/robotglb/Robot.glb';
     controls.autoRotate = true;
     controls.enableZoom = false;
     controls.enableDamping = true;
+    
+    // Ajouter l'option { mode: 'no-cors' } à la demande fetch
+    fetch(glbUrl, { mode: 'no-cors' })
+        .then(response => console.log(response))
+        .catch(error => console.error(error));
 
     // Chargement du modèle 3D
     const loader = new GLTFLoader();
