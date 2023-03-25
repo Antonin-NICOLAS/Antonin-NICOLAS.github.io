@@ -116,10 +116,24 @@ section{
     margin-left: 10%;
     }
 }
-@media screen and (max-width:370px) {
+@media screen and (max-width:452px) {
   .a-propos-bold{
     width: 90%;
     margin-left: 5%;
+    }
+}
+@media screen and (max-width:420px) {
+  .a-propos-bold{
+    width: 95%;
+    margin-left: 2.5%;
+    font-size: 18;
+    }
+}
+@media screen and (max-width:380px) {
+  .a-propos-bold{
+    width: 95%;
+    margin-left: 2.5%;
+    font-size: 16;
     }
 }
 @media screen and (max-width:500px) {
