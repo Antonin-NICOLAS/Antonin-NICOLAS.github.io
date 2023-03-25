@@ -110,6 +110,18 @@ section{
     margin-left: 15%;
     }
 }
+@media screen and (max-width:520px) {
+  .a-propos-bold{
+    width: 80%;
+    margin-left: 10%;
+    }
+}
+@media screen and (max-width:370px) {
+  .a-propos-bold{
+    width: 90%;
+    margin-left: 5%;
+    }
+}
 @media screen and (max-width:500px) {
   .a-propos{
     font-size: 18px;
