@@ -9,12 +9,7 @@ export default {
     server:
     {
         host: true,
-        open: !isCodeSandbox // Open if it's not a CodeSandbox,
-    },
-    fs: {
-        // Le chemin absolu vers votre dossier contenant les fichiers G
-        strict: true,
-        allow: ['/medias/glb/'],
+        open: !isCodeSandbox // Open if it's not a CodeSandbox
     },
     plugins: [reactRefresh()],
     build: {
