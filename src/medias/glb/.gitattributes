@@ -1,1 +1,1 @@
-*.glb filter=lfs diff=lfs merge=lfs -text binary
+Robot.glb filter=lfs diff=lfs merge=lfs -text binary
