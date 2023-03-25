@@ -45,24 +45,16 @@ controls.enableDamping = true;
 
 // Chargement du modèle 3D
 const loader = new GLTFLoader();
-fetch('https://storage.googleapis.com/robotglb/Robot.glb',{mode: 'no-cors',credentials: 'include'})
-    .then(response => response.blob())
-    .then(blob => {
-        // Utilisez createObjectURL pour créer une URL blob à partir de la réponse HTTP
-        const blobURL = URL.createObjectURL(blob);
-
-        // Chargez le fichier GLB à l'aide du loader GLTF de Three.js
-        loader.load(
-            blobURL,
-            (gltf) => {
-                scene.add(gltf.scene);
-            },
-            undefined,
-            (error) => {
-                console.error(error);
-            }
-        );
-    });
+loader.load(
+    '/medias/glb/Robot.glb',
+    (gltf) => {
+    scene.add(gltf.scene);
+    },
+    undefined,
+    (error) => {
+        console.error(error);
+    }
+);
 
 // Fonction d'animation
 function animate() {
