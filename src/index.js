@@ -23,8 +23,8 @@ gsap.to('.char', {
       const scene = new THREE.Scene();
 
       const sizes = {
-        width: innerWidth,
-        height: innerHeight
+        width: window.innerWidth * 0.6,
+        height: window.innerHeight
     }
       // Initialisation de la caméra
       const camera = new THREE.PerspectiveCamera(
@@ -40,6 +40,8 @@ gsap.to('.char', {
 
       // Initialisation du rendu
       const canvas = document.querySelector('.EARTH3D');
+      canvas.style.marginLeft = '20%';
+      canvas.style.marginRight = '20%';
       const renderer = new THREE.WebGLRenderer({
         canvas: canvas,
         antialias: true,

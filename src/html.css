@@ -337,10 +337,9 @@ html.transition *:after {
   }
   .topinner{
     height: 65px;
-    width: 100%;
   }
   .navbar__links { 
-    overflow:hidden;
+    overflow-x:hidden;
     display:flex;
     flex-direction:column;
     padding: 0;
@@ -378,6 +377,18 @@ html.transition *:after {
   .navbar__link > a:hover {
     padding-left:2rem;
     letter-spacing:8px;
+  }
+  @media screen and (max-height:560px) {
+    .navbar{
+      height: 50px;
+    }
+    .topinner{
+      height: 50px;
+    }
+    .navbar__links{
+      top: 52px;
+      height: calc(100vh - 45px);
+    }
   }
   
   /* Toggle menu */
