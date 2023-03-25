@@ -48,7 +48,7 @@ const loader = new GLTFLoader();
 loader.load(
     '/medias/glb/Robot.glb',
     (gltf) => {
-    scene.add(gltf.scene);
+        scene.add(gltf.scene);
     },
     undefined,
     (error) => {
