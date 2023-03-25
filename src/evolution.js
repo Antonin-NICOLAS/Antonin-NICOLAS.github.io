@@ -2,27 +2,8 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
-const cors_proxy = require('cors-anywhere');
-const express = require('express')
-const app = express()
-
-//const port = process.env.PORT || 8000
-//const host = process.env.HOST || 'localhost'
-
-const server = app.listen(process.env.PORT || 8080, () => {
-const port = server.address().port;
-const host = server.address().address;
-
-cors_proxy.createServer({
-    originWhitelist: [], // Permets à tout le monde de faire des requêtes
-    requireHeader: [],
-    removeHeaders: []
-}).listen(port, host, () => {
-    console.log(`CORS Anywhere server running on ${host}:${port}`);
-});
-const proxyUrl = '${host}:${port}'
-const glbUrl = 'https://storage.googleapis.com/robotglb/Robot.glb';
-
+const proxyUrl = `http://${host}:${port}/proxy`
+const glbUrl = 'https://storage.googleapis.com/robotglb/Robot.glb'
 //ROBOT3D//
 
     // Initialisation de la scène
@@ -63,16 +44,11 @@ const glbUrl = 'https://storage.googleapis.com/robotglb/Robot.glb';
     controls.autoRotate = true;
     controls.enableZoom = false;
     controls.enableDamping = true;
-    
-    // Ajouter l'option { mode: 'no-cors' } à la demande fetch
-    fetch(glbUrl, { mode: 'no-cors' })
-        .then(response => console.log(response))
-        .catch(error => console.error(error));
 
     // Chargement du modèle 3D
     const loader = new GLTFLoader();
     loader.load(
-        proxyUrl + '/' + glbUrl, // Ajoutez l'url du fichier glb après l'adresse du serveur proxy
+        `${proxyUrl}/${encodeURIComponent(glbUrl)}`, // Ajoutez l'url du fichier glb après l'adresse du serveur proxy
         (gltf) => {
             scene.add(gltf.scene);
         },
