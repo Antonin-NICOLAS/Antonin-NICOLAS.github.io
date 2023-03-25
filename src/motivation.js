@@ -9,7 +9,7 @@ textElements.forEach(function(element) {
     // Create a Blotter Text object for the text
     const text = new Blotter.Text(textString, {
         family: "'Sigmar One', serif",
-        size: 50,
+        size: calculateFontSize(window.innerWidth),
         fill: 'rgb(7, 98, 116)',
         paddingLeft: 20,
         paddingRight: 20
@@ -26,4 +26,18 @@ textElements.forEach(function(element) {
     const blotter = new Blotter(material, { texts: text });
     const scope = blotter.forText(text);
     scope.appendTo(element);
+
+    // Listen for screen size changes and adjust font size accordingly
+    window.addEventListener('resize', function() {
+        text.parameters.size = calculateFontSize(window.innerWidth);
+        scope.redraw();
+    });
 });
+// Calculates the font size based on the screen width
+function calculateFontSize(width) {
+    if (width < 750) {
+        return Math.round((width / 600) * 30);
+    } else {
+        return Math.round((width / 1400) * 50);
+    }
+}
