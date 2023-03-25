@@ -2,7 +2,9 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
-const parcelPath = new URL('/medias/glb/Robot.glb', import.meta.url);
+const proxyUrl = 'https://antonin-nicolas-github-io.vercel.app';
+const glbUrl = 'https://github.com/Antonin-NICOLAS/Antonin-NICOLAS.github.io/raw/main/medias/glb/Robot.glb';
+
 //ROBOT3D//
 
     // Initialisation de la scène
@@ -47,7 +49,7 @@ const parcelPath = new URL('/medias/glb/Robot.glb', import.meta.url);
     // Chargement du modèle 3D
     const loader = new GLTFLoader();
     loader.load(
-        parcelPath.href, // chemin vers le modèle
+        proxyUrl + glbUrl, // chemin vers le modèle
         (gltf) => {
             scene.add(gltf.scene);
         },
