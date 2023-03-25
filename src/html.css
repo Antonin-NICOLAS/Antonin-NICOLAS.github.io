@@ -247,7 +247,10 @@ ul li a{
   text-decoration:none;
   align-items: center;
 }
-
+.topinner{
+  height: 8vh;
+  width: 100%;
+}
 
 /*mode nuit*/
 
@@ -331,6 +334,10 @@ html.transition *:after {
     padding:10px;
     font-size:1rem;
     background: var(--color-text-navbar);
+  }
+  .topinner{
+    height: 65px;
+    width: 100%;
   }
   .navbar__links { 
     overflow:hidden;
@@ -466,6 +473,10 @@ html.transition *:after {
       font-size:1rem;
       background: var(--color-text-navbar);
     }
+    .topinner{
+      height: 50px;
+      width: 100%;
+    }
     .navbar__links { 
       overflow:hidden;
       display:flex;
@@ -496,6 +507,10 @@ html.transition *:after {
       padding:10px;
       font-size:1rem;
       background: var(--color-text-navbar);
+    }
+    .topinner{
+      height: 40px;
+      width: 100%;
     }
     .navbar__links { 
       overflow:hidden;
@@ -730,10 +745,6 @@ form .pied-formulaire button:hover {
 .imgfooterD{
   float: right;
   rotate: -90deg;
-}
-.topinner{
-  height: 8vh;
-  width: 100%;
 }
 @media screen and (max-width:930px) {
   .imgfooterG{
