@@ -116,6 +116,12 @@ section{
     margin-left: 10%;
     }
 }
+@media screen and (max-width:500px) {
+  .a-propos{
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
 @media screen and (max-width:452px) {
   .a-propos-bold{
     width: 90%;
@@ -126,25 +132,19 @@ section{
   .a-propos-bold{
     width: 95%;
     margin-left: 2.5%;
-    font-size: 18;
-    }
-}
-@media screen and (max-width:380px) {
-  .a-propos-bold{
-    width: 95%;
-    margin-left: 2.5%;
-    font-size: 16;
-    }
-}
-@media screen and (max-width:500px) {
-  .a-propos{
     font-size: 18px;
-    line-height: 21px;
-  }
+    }
 }
 @media screen and (max-width:390px) {
   .a-propos{
     font-size: 16px;
     line-height: 18.5px;
   }
+}
+@media screen and (max-width:380px) {
+  .a-propos-bold{
+    width: 95%;
+    margin-left: 2.5%;
+    font-size: 16px;
+    }
 }
