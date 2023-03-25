@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node copy-glb.cjs",
+    "build": "curl https://storage.googleapis.com/robotglb/Robot.glb --output src/medias/glb/Robot.glb && vite build && node copy-glb.cjs",
     "start": "node server.cjs",
-    "all": "vite build && node copy-glb.cjs && node server.cjs"
+    "all": "curl https://storage.googleapis.com/robotglb/Robot.glb --output src/medias/glb/Robot.glb vite build && node copy-glb.cjs && node server.cjs"
   },
   "author": "Antonin",
   "dependencies": {
