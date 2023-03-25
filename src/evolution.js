@@ -2,7 +2,7 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
-const proxyUrl = 'https://antonin-nicolas-github-io.vercel.app';
+const proxyUrl = 'https://cors-anywhere.herokuapp.com';
 const glbUrl = 'https://storage.googleapis.com/robotglb/Robot.glb';
 
 //ROBOT3D//
