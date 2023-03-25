@@ -30,22 +30,15 @@ body{
 section{
   width: 100%;
 }
-.topinner{
-  position: relative;
-  height: 12vh;
-  width: 100%;
-}
 .inner{
   background-image: linear-gradient(135deg, var(--1) 0,var(--2) 60%, var(--3) 100%);
   opacity: 0.6;
-  padding-left: 3%;
-  padding-right: 3%;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 3%;
   width: 90%;
+  margin-top: 3%;
   margin-left: 5%;
   margin-right: 5%;
-  margin-bottom: 6vh;
+  margin-bottom: 3%;
   border-radius: 20px;
   line-height: 2.3vw;
 }
@@ -85,4 +78,47 @@ section{
 .a-canvas:hover{
   background-color: tomato;
   transition: 0.4s ease-in-out;
+}
+@media screen and (max-width:960px) {
+  .a-propos{
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .a-propos-bold{
+    width: 60%;
+    height: fit-content;
+    margin-left: 20%;
+    font-size: 20px;
+    letter-spacing: 7px;
+    }
+}
+@media screen and (max-width:860px) {
+  .a-propos-bold{
+    letter-spacing: 5px;
+    }
+}
+@media screen and (max-width:770px) {
+  .a-propos-bold{
+    letter-spacing: 0;
+    padding: 8px;
+    }
+}
+@media screen and (max-width:770px) {
+  .a-propos-bold{
+    padding: 12px;
+    width: 70%;
+    margin-left: 15%;
+    }
+}
+@media screen and (max-width:500px) {
+  .a-propos{
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+@media screen and (max-width:390px) {
+  .a-propos{
+    font-size: 16px;
+    line-height: 18.5px;
+  }
 }
