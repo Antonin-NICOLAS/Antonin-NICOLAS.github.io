@@ -20,7 +20,7 @@ cors_proxy.createServer({
 }).listen(port, host, () => {
     console.log(`CORS Anywhere server running on ${host}:${port}`);
 });
-
+const proxyUrl = '${host}:${port}'
 const glbUrl = 'https://storage.googleapis.com/robotglb/Robot.glb';
 
 //ROBOT3D//
@@ -72,15 +72,15 @@ const glbUrl = 'https://storage.googleapis.com/robotglb/Robot.glb';
     // Chargement du modèle 3D
     const loader = new GLTFLoader();
     loader.load(
-        glbUrl,
+        proxyUrl + '/' + glbUrl, // Ajoutez l'url du fichier glb après l'adresse du serveur proxy
         (gltf) => {
             scene.add(gltf.scene);
         },
         undefined,
         (error) => {
             console.error(error);
-    },
-);
+        }
+    );
 
     // Fonction d'animation
     function animate() {
