@@ -1,8 +1,13 @@
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import '../server.cjs'
+import { express } from 'express'
+const app = express()
 
+const server = app.listen(process.env.PORT || 8080, () => {
+const port = server.address().port;
+const host = server.address().address;
+});
 const proxyUrl = `http://${host}:${port}/proxy`
 const glbUrl = 'https://storage.googleapis.com/robotglb/Robot.glb'
 //ROBOT3D//
