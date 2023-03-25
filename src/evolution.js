@@ -2,7 +2,6 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
-const proxyUrl = 'https://cors-anywhere.herokuapp.com';
 const glbUrl = 'https://storage.googleapis.com/robotglb/Robot.glb';
 
 //ROBOT3D//
@@ -49,7 +48,7 @@ const glbUrl = 'https://storage.googleapis.com/robotglb/Robot.glb';
     // Chargement du modèle 3D
     const loader = new GLTFLoader();
     loader.load(
-        proxyUrl + '/proxy/' + encodeURIComponent(glbUrl),
+        glbUrl,
         (gltf) => {
             scene.add(gltf.scene);
         },
