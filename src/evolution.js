@@ -3,7 +3,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
 const proxyUrl = 'https://antonin-nicolas-github-io.vercel.app';
-const glbUrl = 'https://github.com/Antonin-NICOLAS/Antonin-NICOLAS.github.io/raw/main/medias/glb/Robot.glb';
+const glbUrl = 'https://storage.googleapis.com/robotglb/Robot.glb';
 
 //ROBOT3D//
 
@@ -49,11 +49,15 @@ const glbUrl = 'https://github.com/Antonin-NICOLAS/Antonin-NICOLAS.github.io/raw
     // Chargement du modèle 3D
     const loader = new GLTFLoader();
     loader.load(
-        proxyUrl + glbUrl, // chemin vers le modèle
+        proxyUrl + '/proxy/' + encodeURIComponent(glbUrl),
         (gltf) => {
             scene.add(gltf.scene);
         },
-    );
+        undefined,
+        (error) => {
+            console.error(error);
+    },
+);
 
     // Fonction d'animation
     function animate() {
