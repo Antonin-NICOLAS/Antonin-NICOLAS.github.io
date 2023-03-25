@@ -1,14 +1,7 @@
-import * as THREE from 'three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import { express } from 'express'
-const app = express()
+import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
-const server = app.listen(process.env.PORT || 8080, () => {
-const port = server.address().port;
-const host = server.address().address;
-});
-const proxyUrl = `http://${host}:${port}/proxy`
 const glbUrl = 'https://storage.googleapis.com/robotglb/Robot.glb'
 //ROBOT3D//
 
@@ -54,7 +47,7 @@ const glbUrl = 'https://storage.googleapis.com/robotglb/Robot.glb'
     // Chargement du modèle 3D
     const loader = new GLTFLoader();
     loader.load(
-        `${proxyUrl}/${encodeURIComponent(glbUrl)}`, // Ajoutez l'url du fichier glb après l'adresse du serveur proxy
+        glbUrl, // Ajoutez l'url du fichier glb après l'adresse du serveur proxy
         (gltf) => {
             scene.add(gltf.scene);
         },
