@@ -3,9 +3,15 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
 const cors_proxy = require('cors-anywhere');
+const express = require('express')
+const app = express()
 
-const host = process.env.HOST || '0.0.0.0';
-const port = process.env.PORT || 8080;
+//const port = process.env.PORT || 8000
+//const host = process.env.HOST || 'localhost'
+
+const server = app.listen(process.env.PORT || 8080, () => {
+const port = server.address().port;
+const host = server.address().address;
 
 cors_proxy.createServer({
     originWhitelist: [], // Permets à tout le monde de faire des requêtes
