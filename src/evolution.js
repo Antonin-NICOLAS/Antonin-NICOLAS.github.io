@@ -2,6 +2,19 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
+const cors_proxy = require('cors-anywhere');
+
+const host = process.env.HOST || '0.0.0.0';
+const port = process.env.PORT || 8080;
+
+cors_proxy.createServer({
+    originWhitelist: [], // Permets à tout le monde de faire des requêtes
+    requireHeader: [],
+    removeHeaders: []
+}).listen(port, host, () => {
+    console.log(`CORS Anywhere server running on ${host}:${port}`);
+});
+
 const glbUrl = 'https://storage.googleapis.com/robotglb/Robot.glb';
 
 //ROBOT3D//
