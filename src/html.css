@@ -36,13 +36,40 @@ body{
   height: 100%;
   width: 100%;
 }
+ul{
+  list-style: none;
+}
+body{
+  font-family: 'Goldman', sans-serif, serif, arial, 'Times New Roman';
+  background-color: var(--bg);
+}
+
+#unselectable {
+-webkit-user-select: none;
+-webkit-touch-callout: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+
 /*loader*/
+.loading{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: var(--bg);
+  display: flex;
+  justify-content: center;
+  z-index: 9;
+  top:0;
+  left: 0;
+}
 .loaderspace{
   position: fixed;
   top: 0;
   left: 0;
   display: flex;
-  background-color: var(--bg);
   z-index: 10;
   height: 100%;
   width: 100%;
@@ -56,6 +83,14 @@ body{
   align-items: center;
   transform-style: preserve-3d;
   transform: perspective(500px) rotateX(60deg);
+}
+.loadertext{
+  position: absolute;
+  top: calc(50% + 300px / 2 + 10%);
+  color: var(--color-text-body);
+  width: 60vw;
+  font-size: 3vw;
+  z-index: 11;
 }
 .loader span{
   position: absolute;
@@ -185,28 +220,12 @@ body{
   transition: 0.75s ease-in-out;
 }
 
-ul{
-    list-style: none;
-}
-body{
-    font-family: 'Goldman', sans-serif, serif, arial, 'Times New Roman';
-    background-color: var(--bg);
-}
-
-#unselectable {
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
 /*navbar*/
 
 .navbar__logo{
   font-family: 'Plaster', sans-serif, arial,'Times New Roman', Times, serif;
   font-size: 3vw;
-  margin-left: 50px;
+  margin-left: 5%;
   text-align: center;
   letter-spacing: 3px;
   color:var(--bg);
@@ -396,7 +415,7 @@ html.transition *:after {
     display:block;
     position:relative;
     padding:0;
-    margin-right: 50px;
+    margin-right: 5%;
     width:45px;
     height:45px;
     border:none;

@@ -40,8 +40,6 @@ gsap.to('.char', {
 
       // Initialisation du rendu
       const canvas = document.querySelector('.EARTH3D');
-      canvas.style.marginLeft = '20%';
-      canvas.style.marginRight = '20%';
       const renderer = new THREE.WebGLRenderer({
         canvas: canvas,
         antialias: true,
@@ -77,6 +75,12 @@ window.addEventListener('resize', () =>
     //update sizes
     sizes.width = window.innerWidth
     sizes.height = window.innerHeight
+
+    if (window.innerWidth < 800) {
+      camera.position.z = 1.5;
+  } else {
+      camera.position.z = 2;
+  }
     //update camera
     camera.aspect = sizes.width / sizes.height
     camera.updateProjectionMatrix()
@@ -92,14 +96,14 @@ var pinnedHeight = $(".PART2").outerHeight(true) - $(".background-PART2").outerH
 
 (function ($) { // wait for document ready
   // build scene
-  var scene = new ScrollMagic.Scene({triggerElement: ".EARTH3D", duration: pinnedHeight, triggerHook:0.08})
+  var scene = new ScrollMagic.Scene({triggerElement: ".EARTH3D", duration: pinnedHeight, triggerHook:0.05})
           .setPin(".EARTH3D")
           .addTo(controller);
 })($);
 
 (function ($) { // wait for document ready
   // build scene
-  var scene = new ScrollMagic.Scene({triggerElement: ".EARTH3D", duration: pinnedHeight, triggerHook:0.08})
+  var scene = new ScrollMagic.Scene({triggerElement: ".EARTH3D", duration: pinnedHeight, triggerHook:0.05})
           .setPin(".background-PART2")
           .addTo(controller);
 })($);
