@@ -11,10 +11,6 @@ body {
     padding: 0;
     overflow-x: hidden;
 }
-.embed-container{
-    height: 80%;
-    width: 92%;
-}
 embed{
     margin-top: 5%;
     margin-left: 5%;
