@@ -31,3 +31,10 @@ fs.copyFile('./src/medias/glb/ogimage.png', './dist/medias/glb/ogimage.png', (er
     console.log('OGimage png file copied successfully!');
   }
 });
+fs.copyFile('./src/medias/rapport_stage.pdf', './dist/medias/rapport_stage.pdf', (err) => {
+  if (err) {
+    console.error(err);
+  } else {
+    console.log('rapport_stage file copied successfully!');
+  }
+});
