@@ -11,3 +11,8 @@ body {
     padding: 0;
     overflow-x: hidden;
 }
+
+embed{
+    margin-left: 5%;
+    margin-right: 5%;
+}
